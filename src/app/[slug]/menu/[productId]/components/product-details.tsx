@@ -80,7 +80,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
             </div>
           </div>
 
-          <ScrollArea className="mb-10 h-full">
+          <ScrollArea className="h-full">
             {/* SOBRE */}
             <div className="mt-6 space-y-3">
               <h4 className="font-semibold">Sobre</h4>
