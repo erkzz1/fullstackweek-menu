@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { formatCurrency } from "@/helpers/format-currency";
 
+import CartSheet from "../../components/cart-sheet";
 import { CartContext } from "../../contexts/cart";
-import CartSheet from "./cart-sheet";
 
 interface ProductDetailsProps {
   product: Prisma.ProductGetPayload<{
@@ -49,7 +49,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
 
   return (
     <>
-      <div className="relative z-50 mt-[-1.5rem] flex flex-auto flex-col overflow-hidden rounded-t-3xl p-5">
+      <div className="relative z-50 mt-[-1.5rem] flex flex-auto flex-col overflow-hidden rounded-t-3xl p-5 ">
         <div className="flex-auto overflow-hidden">
           {/* RESTAURANT */}
           <div className="item-center flex gap-1.5">
@@ -92,7 +92,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
             </div>
           </div>
 
-          <ScrollArea className="h-full">
+          <ScrollArea className="h-full pb-12">
             {/* SOBRE */}
             <div className="mt-6 space-y-3">
               <h4 className="font-semibold">Sobre</h4>
@@ -107,7 +107,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
                 <ChefHatIcon size={18} />
                 <h4 className="font-semibold">Ingredientes</h4>
               </div>
-              <ul className="text-muted-fo list-disc px-5 text-sm text-muted-foreground">
+              <ul className="text-muted-fo list-disc px-5 text-sm text-muted-foreground pb-12">
                 {product.ingredients.map((ingredient) => (
                   <li key={ingredient}>{ingredient} </li>
                 ))}
